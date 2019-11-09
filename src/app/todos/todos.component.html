@@ -1,0 +1,15 @@
+<h1>Add toold</h1>
+<form (submit) = "addTodo()">
+<input type="text" [(ngModel)]="textboxvalue" name="todotextbox">
+</form>
+<p>
+  todos works!
+</p>
+<div>
+  <ul>
+    <li *ngFor="let todo of todos">
+      {{todo.text}} <button (click)="deleteToDo(this.todo)">X</button>
+    </li>
+  </ul>
+</div>
+
